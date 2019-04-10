@@ -1,0 +1,181 @@
+/* Strip the ul of padding and list styling */
+/*step-1*/
+body{
+  background: #000033;
+  margin: 0;
+  padding: 0;
+}
+
+.nav{
+
+  height: 50px;
+  background: #19c589;
+}
+ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+
+}
+
+/*step-2*/
+li{
+  display: inline-block;
+  float: left;
+  /* margin-right: 1px; */
+}
+
+
+/*step-3  -> Style for Menu Links*/
+li a{
+  display: block;
+  min-width: 140px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  font-family: "Helvetica Neue" , Helvetica , Arial , sans-serif;
+  color: #fff;
+  /* background: #007333;  /*#2f3036;*/
+  text-decoration: none;
+}
+
+/*step-4  -> Hove effect for top-level links */
+li:hover a{
+  background: #19e589;
+  /* margin: 0 1px; */
+  transition: 0.1s;
+}
+
+
+/* ul li a{
+  cursor: pointer;
+} */
+
+#service > a{
+  cursor: default;
+}
+
+/*step-5  -> Style for dropdown links */
+
+li ul li a{
+  /* background: #f3f3f3; */
+  background: #2f3036;
+  color: #fff;
+  height: 40px;
+  line-height: 40px;
+  cursor: pointer
+}
+
+/*step-5  -> Hove effect for dropdown links */
+li:hover ul li a:hover{
+  margin-top: 1px;
+  margin-bottom: 1px;
+  background: #19c589;
+  color: #fff;
+  }
+
+/*step-6  -> Hide dropdown links untill they are needed */
+li ul{
+  display: none;
+}
+
+/*step-7  -> Make sure dropdown links are vertical*/
+li ul li{
+  display: block;
+  float: none;
+}
+
+/*step-8  -> Prevent text wrapping on dropdown links */
+li ul li a{
+  width: auto;
+  min-width: 100px;
+  padding: 0 20px;
+}
+
+/*step-9  -> Display the dropdown on hover ... + sign indicate immediately after the first elt
+If we fail to include ".hidden:hover" then we see the hidden dropdown menu from the above but when
+we want to click they get hidden immediately */
+ul li a:hover + .hidden , .hidden:hover{
+  display: block;
+}
+
+/*step-10  -> Hide checkbox */
+input[type=checkbox]{
+  display: none;
+}
+
+/*step-11  ->  Show the menu when invisible checkbox is checked. Here tild(~) is working in the same
+way as the above plus(+) sign but it says everything under the checked checkbox*/
+input[type=checkbox]:checked ~ #menu{
+  display: block;
+
+}
+
+/*step-12 -> Styling the show-menu label */
+.show-menu{
+  font-family: "Helvetica Neue" , Helvetica , Arial , sans-serif;
+  text-decoration: none;
+  color: #fff;
+  background: #19c589;
+  text-align: center;
+  padding: 10px 0;
+  display: none;
+}
+
+h2{
+  position:relative;
+  text-align: center;
+  margin-top: 300px;
+  margin-left:100px;
+  color:white;
+  /* margin-top: 150px; */
+}
+
+/*step-103  -> Responsive styles */
+@media screen and (max-width:760px) {
+  /*step-14  -> Make dropdown links appear here */
+  ul{
+    position: static;
+    display: none;
+  }
+
+  /*step-15  -> Create vertical spacing */
+  /* li{
+    margin-bottom: 1px;
+  } */
+
+  li a{
+      background: #19c589;/*#2f3036;*/
+      margin-top: 1px;
+      transition: 1s;
+  }
+
+  /*step-16  -> Make all menu links full width */
+  ul li , li a{
+    width: 100%;
+    font-size: 18px;
+
+  }
+  li:hover ul li a{
+    margin-top: 1px;
+    /* background: #007333; */
+    background: #2f3036;
+    font-size: 0.7em;
+    color: #fff;
+    transition: 1s;
+  }
+
+
+
+
+  /*step-15  -> Show the hidden menu*/
+  .show-menu{
+    display: block;
+    background: #19c589;  /*#2f3036;*/
+    font-size: 20px;
+  }
+
+
+
+}
