@@ -9,7 +9,8 @@ body{
 .nav{
 
   height: 50px;
-  background: #19c589;
+  background: red;
+  /*background: #19c589;*/
 }
 ul{
   list-style-type: none;
@@ -42,7 +43,8 @@ li a{
 
 /*step-4  -> Hove effect for top-level links */
 li:hover a{
-  background: #19e589;
+ /* background: #19e589; */
+  background: red;
   /* margin: 0 1px; */
   transition: 0.1s;
 }
@@ -71,7 +73,8 @@ li ul li a{
 li:hover ul li a:hover{
   margin-top: 1px;
   margin-bottom: 1px;
-  background: #19c589;
+  background: red;
+  /*background: #19c589;*/
   color: #fff;
   }
 
@@ -117,7 +120,8 @@ input[type=checkbox]:checked ~ #menu{
   font-family: "Helvetica Neue" , Helvetica , Arial , sans-serif;
   text-decoration: none;
   color: #fff;
-  background: #19c589;
+  background: red;
+  /*background: #19c589;*/
   text-align: center;
   padding: 10px 0;
   display: none;
@@ -146,7 +150,8 @@ h2{
   } */
 
   li a{
-      background: #19c589;/*#2f3036;*/
+      background: red;
+      /* background: #19c589;/*#2f3036;*/ */
       margin-top: 1px;
       transition: 1s;
   }
@@ -172,7 +177,8 @@ h2{
   /*step-15  -> Show the hidden menu*/
   .show-menu{
     display: block;
-    background: #19c589;  /*#2f3036;*/
+    background: red;
+    /*background: #19c589;  /*#2f3036;*/ */
     font-size: 20px;
   }
 
